@@ -1,0 +1,10 @@
+ADD,MODIFY AND DROP:
+write a query language to change phno to decimal(12, 2) 
+alter table students
+add phone varchar(100);
+ALTER TABLE students
+MODIFY phone_number DECIMAL(12,2);
+DELETE:
+DROP: table permenantly removes table structure and table data
+drop table students;
+TRUNCATE
