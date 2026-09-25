@@ -1,0 +1,52 @@
+ADD,MODIFY AND DROP:
+write a query language to change phno to decimal(12, 2)
+alter table students
+add phone varchar(100);
+ALTER TABLE students
+MODIFY phone_number DECIMAL(12,2);
+DELETE:
+DROP: table permenantly removes table structure and table data
+drop table students;
+TRUNCATE:
+TRUNCATE TABLE employees;
+THREAD OPERATION:
+Read():
+CREATE DATABASE company_db1;
+USE company_db1;
+CREATE TABLE employees (
+employee_id INT PRIMARY KEY,
+employee_name VARCHAR(100),
+department VARCHAR(50),
+salary DECIMAL(10,2)
+);
+INSERT INTO employees
+(employee_id, employee_name, department, salary)
+VALUES
+(101, 'Ravi', 'IT', 55000),
+(102, 'Priya', 'HR', 65000),
+(103, 'Arun', 'IT', 75000),
+(104, 'Sneha', 'Finanace', 60000),
+(105, 'Kiran', 'IT', 85000);
+select department, salary from employees;
+select department, salary from employees
+where salary > 65000;
+select * from employees
+where(department = 'IT' and salary = 70000) or department = 'HR';
+ORDER BY:
+is used to short the result of a query in this there are 2 types
+1.Ascending order
+2.descending order
+select * from employees order by salary;
+*order default prints ascending order
+where + between
+where: it is used to filter records based on the condition
+b/w: it is used to check weather the value falls within specific range
+select * from employees
+where salary between 60000 and 80000;
+write a query where employees who are not in IT
+select * from employees
+where NOT department = 'IT';
+write a query using AND operator IT Employee earning more than 70000
+select * from employees
+where  department = 'IT'
+AND salary > 70000;
